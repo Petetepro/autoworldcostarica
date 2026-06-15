@@ -1,15 +1,51 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Mi página</title>
+<html lang="es">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoWorld</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
+
 <body>
 
-    <h1>Hola Axel</h1>
+    <!-- MODAL -->
+    <div id="modal" class="modal">
+        <div class="modal-contenido">
+            <span id="cerrar">&times;</span>
 
-    <button onclick="saludar()">Haz clic</button>
+            <img id="modal-img" src="" alt="">
+
+            <h2 id="modal-marca"></h2>
+
+            <p><strong>Modelo:</strong> <span id="modal-modelo"></span></p>
+
+            <p><strong>Motor:</strong> <span id="modal-motor"></span></p>
+
+            <p><strong>Potencia:</strong> <span id="modal-potencia"></span></p>
+
+            <p><strong>Velocidad Máxima:</strong> <span id="modal-velocidad"></span></p>
+
+            <p><strong>Precio:</strong> <span id="modal-precio"></span></p>
+        </div>
+    </div>
+
+    <header>
+        <h1>🚗 AutoWorld</h1>
+        <p>Las mejores marcas y modelos de automóviles del mundo</p>
+    </header>
+
+    <section class="hero">
+        <h2>Descubre más de 30 marcas de autos</h2>
+        <p>Información, historia y modelos destacados.</p>
+    </section>
+
+    <main id="contenedor-autos"></main>
+
+    <footer>
+        <p>© 2026 AutoWorld - Todos los derechos reservados.</p>
+    </footer>
 
     <script src="script.js"></script>
 
