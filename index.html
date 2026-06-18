@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AutoWorld</title>
+    <title>AutoWorld - Venta de Autos</title>
     <link rel="stylesheet" href="estilos.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
@@ -13,6 +16,7 @@
     <!-- MODAL -->
     <div id="modal" class="modal">
         <div class="modal-contenido">
+
             <span id="cerrar">&times;</span>
 
             <img id="modal-img" src="" alt="">
@@ -25,27 +29,234 @@
 
             <p><strong>Potencia:</strong> <span id="modal-potencia"></span></p>
 
-            <p><strong>Velocidad Máxima:</strong> <span id="modal-velocidad"></span></p>
+            <p><strong>Velocidad:</strong> <span id="modal-velocidad"></span></p>
 
             <p><strong>Precio:</strong> <span id="modal-precio"></span></p>
+
+            <button class="btn-info">
+                Solicitar Información
+            </button>
+
         </div>
     </div>
 
-    <header>
-        <h1>🚗 AutoWorld</h1>
-        <p>Las mejores marcas y modelos de automóviles del mundo</p>
-    </header>
+    <!-- NAVBAR -->
+    <nav>
 
-    <section class="hero">
-        <h2>Descubre las mejores marcas de autos</h2>
-        <p>Información, historia y modelos destacados.</p>
+        <div class="logo">
+            🚗 AutoWorld
+        </div>
+
+        <ul>
+
+            <li><a href="#inicio">Inicio</a></li>
+
+            <li><a href="#autos">Autos</a></li>
+
+            <li><a href="#nosotros">Nosotros</a></li>
+
+            <li><a href="#contacto">Contacto</a></li>
+
+        </ul>
+
+        <button id="modoOscuro">
+            🌙
+        </button>
+
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+
+        <h1>Encuentra el auto de tus sueños</h1>
+
+        <p>
+            Las mejores marcas del mundo en un solo lugar.
+        </p>
+
+        <a href="#autos" class="btn-principal">
+            Ver Catálogo
+        </a>
+
     </section>
 
-    <main id="contenedor-autos"></main>
+    <!-- ESTADÍSTICAS -->
+    <section class="estadisticas">
 
+        <div>
+            <h2>500+</h2>
+            <p>Autos Vendidos</p>
+        </div>
+
+        <div>
+            <h2>35+</h2>
+            <p>Marcas Disponibles</p>
+        </div>
+
+        <div>
+            <h2>1000+</h2>
+            <p>Clientes Felices</p>
+        </div>
+
+        <div>
+            <h2>10</h2>
+            <p>Años de Experiencia</p>
+        </div>
+
+    </section>
+
+    <!-- AUTOS -->
+    <section id="autos">
+
+        <h2 class="titulo-seccion">
+            Catálogo de Vehículos
+        </h2>
+
+        <main id="contenedor-autos"></main>
+
+    </section>
+
+    <!-- SOBRE NOSOTROS -->
+    <section id="nosotros" class="nosotros">
+
+        <h2>Sobre AutoWorld</h2>
+
+        <p>
+            AutoWorld es una plataforma especializada en la
+            venta y exhibición de vehículos de las mejores
+            marcas del mundo.
+
+            Nuestro objetivo es ayudar a los clientes a
+            encontrar el vehículo ideal de forma rápida,
+            segura y confiable.
+        </p>
+
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section class="testimonios">
+
+        <h2>Opiniones de Clientes</h2>
+
+        <div class="contenedor-testimonios">
+
+            <div class="testimonio">
+
+                <h3>⭐⭐⭐⭐⭐</h3>
+
+                <p>
+                    Excelente atención y vehículos en perfecto estado.
+                </p>
+
+                <span>- Carlos M.</span>
+
+            </div>
+
+            <div class="testimonio">
+
+                <h3>⭐⭐⭐⭐⭐</h3>
+
+                <p>
+                    Compré mi BMW aquí y todo fue muy profesional.
+                </p>
+
+                <span>- María G.</span>
+
+            </div>
+
+            <div class="testimonio">
+
+                <h3>⭐⭐⭐⭐⭐</h3>
+
+                <p>
+                    La mejor experiencia de compra que he tenido.
+                </p>
+
+                <span>- José R.</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="contacto">
+
+        <h2>Contáctanos</h2>
+
+        <form>
+
+            <input
+                type="text"
+                placeholder="Nombre Completo"
+                required>
+
+            <input
+                type="email"
+                placeholder="Correo Electrónico"
+                required>
+
+            <textarea
+                placeholder="Escribe tu mensaje..."
+                rows="5"></textarea>
+
+            <button type="submit">
+                Enviar Mensaje
+            </button>
+
+        </form>
+
+    </section>
+
+    <!-- FOOTER -->
     <footer>
-        <p>© 2026 AutoWorld - Todos los derechos reservados.</p>
+
+        <div>
+
+            <h3>AutoWorld</h3>
+
+            <p>
+                Tu plataforma de confianza para encontrar
+                los mejores automóviles.
+            </p>
+
+        </div>
+
+        <div>
+
+            <h3>Redes Sociales</h3>
+
+            <p>
+                <i class="fab fa-facebook"></i> Facebook
+            </p>
+
+            <p>
+                <i class="fab fa-instagram"></i> Instagram
+            </p>
+
+            <p>
+                <i class="fab fa-youtube"></i> YouTube
+            </p>
+
+        </div>
+
+        <div>
+
+            <h3>Contacto</h3>
+
+            <p>📧 info@autoworld.com</p>
+
+            <p>📞 +506 8888-8888</p>
+
+        </div>
+
     </footer>
+
+    <!-- WHATSAPP -->
+    <a href="#" class="whatsapp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <script src="script.js"></script>
 
