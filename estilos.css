@@ -2,46 +2,169 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
+    font-family:'Segoe UI',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-    background:#f5f5f5;
+    background:#f4f6f9;
+    color:#222;
+    line-height:1.6;
 }
 
-header{
+/* NAVBAR */
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:100;
     background:#111;
     color:white;
-    text-align:center;
-    padding:30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 8%;
 }
+
+.logo{
+    font-size:1.8rem;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#ff3c00;
+}
+
+#modoOscuro{
+    background:#ff3c00;
+    color:white;
+    border:none;
+    padding:10px 15px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+/* HERO */
 
 .hero{
-    background:url("https://images.unsplash.com/photo-1503376780353-7e6692767b70");
+    height:90vh;
+    background:
+    linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+    url("https://images.unsplash.com/photo-1503376780353-7e6692767b70");
     background-size:cover;
     background-position:center;
-    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
     text-align:center;
-    padding:120px 20px;
+    color:white;
+    padding:20px;
 }
 
-.hero h2{
-    font-size:3rem;
+.hero h1{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.3rem;
+    margin-bottom:25px;
+}
+
+.btn-principal{
+    background:#ff3c00;
+    color:white;
+    padding:15px 35px;
+    border-radius:10px;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.btn-principal:hover{
+    background:#d93200;
+}
+
+/* ESTADISTICAS */
+
+.estadisticas{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    padding:60px 8%;
+    text-align:center;
+}
+
+.estadisticas div{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.estadisticas h2{
+    color:#ff3c00;
+    font-size:2.5rem;
+}
+
+/* BUSQUEDA */
+
+.busqueda{
+    padding:40px 8%;
+    text-align:center;
+}
+
+.busqueda h2{
+    margin-bottom:20px;
+}
+
+#buscador{
+    width:100%;
+    max-width:600px;
+    padding:15px;
+    border-radius:10px;
+    border:1px solid #ccc;
+    font-size:1rem;
+}
+
+/* AUTOS */
+
+.titulo-seccion{
+    text-align:center;
+    margin-top:30px;
+    margin-bottom:20px;
+    font-size:2.5rem;
 }
 
 #contenedor-autos{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:20px;
-    padding:30px;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
+    padding:30px 8%;
 }
 
 .tarjeta{
     background:white;
-    border-radius:15px;
+    border-radius:20px;
     overflow:hidden;
-    box-shadow:0 5px 15px rgba(0,0,0,.2);
-    transition:.3s;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+    transition:.4s;
+    cursor:pointer;
 }
 
 .tarjeta:hover{
@@ -60,18 +183,107 @@ header{
 
 .info h3{
     margin-bottom:10px;
+    color:#111;
 }
 
 .info p{
-    color:#555;
+    color:#666;
 }
+
+/* NOSOTROS */
+
+.nosotros{
+    padding:80px 10%;
+    text-align:center;
+    background:white;
+}
+
+.nosotros h2{
+    margin-bottom:20px;
+    font-size:2.5rem;
+}
+
+/* TESTIMONIOS */
+
+.testimonios{
+    padding:80px 8%;
+    background:#f1f1f1;
+    text-align:center;
+}
+
+.testimonios h2{
+    margin-bottom:40px;
+}
+
+.contenedor-testimonios{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.testimonio{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+/* CONTACTO */
+
+.contacto{
+    padding:80px 8%;
+    text-align:center;
+}
+
+.contacto h2{
+    margin-bottom:30px;
+}
+
+.contacto form{
+    max-width:700px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.contacto input,
+.contacto textarea{
+    padding:15px;
+    border-radius:10px;
+    border:1px solid #ccc;
+}
+
+.contacto button{
+    background:#ff3c00;
+    color:white;
+    border:none;
+    padding:15px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.contacto button:hover{
+    background:#d93200;
+}
+
+/* FOOTER */
 
 footer{
     background:#111;
     color:white;
-    text-align:center;
-    padding:20px;
+    padding:50px 8%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
 }
+
+footer h3{
+    margin-bottom:15px;
+}
+
+/* MODAL */
 
 .modal{
     display:none;
@@ -80,19 +292,20 @@ footer{
     left:0;
     width:100%;
     height:100%;
-    background:rgba(0,0,0,.8);
+    background:rgba(0,0,0,.85);
     justify-content:center;
     align-items:center;
-    z-index:1000;
+    z-index:999;
 }
 
 .modal-contenido{
     background:white;
-    width:600px;
-    max-width:90%;
+    width:650px;
+    max-width:95%;
+    padding:25px;
     border-radius:20px;
-    padding:20px;
     text-align:center;
+    position:relative;
 }
 
 .modal-contenido img{
@@ -102,7 +315,81 @@ footer{
 }
 
 #cerrar{
-    float:right;
+    position:absolute;
+    right:20px;
+    top:10px;
     font-size:35px;
     cursor:pointer;
+}
+
+.btn-info{
+    margin-top:20px;
+    background:#ff3c00;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:60px;
+    height:60px;
+    background:#25D366;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:30px;
+    text-decoration:none;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
+/* MODO OSCURO */
+
+.dark-mode{
+    background:#121212;
+    color:white;
+}
+
+.dark-mode .tarjeta,
+.dark-mode .estadisticas div,
+.dark-mode .testimonio,
+.dark-mode .modal-contenido,
+.dark-mode .nosotros{
+    background:#1e1e1e;
+    color:white;
+}
+
+.dark-mode .info p{
+    color:#ccc;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:2.5rem;
+    }
+
+    .hero p{
+        font-size:1rem;
+    }
 }
