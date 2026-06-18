@@ -158,27 +158,29 @@ contenedor.innerHTML += `
 
 const modal = document.getElementById("modal");
 
-function mostrarAuto(index){
+// Función para abrir el modal e inyectar los datos
+function mostrarAuto(index) {
+    const auto = autos[index];
 
-const auto = autos[index];
+    document.getElementById("modal-img").src = auto.imagen;
+    document.getElementById("modal-marca").textContent = auto.marca;
+    document.getElementById("modal-modelo").textContent = auto.modelo;
+    document.getElementById("modal-motor").textContent = auto.motor;
+    document.getElementById("modal-potencia").textContent = auto.potencia;
+    document.getElementById("modal-velocidad").textContent = auto.velocidad;
+    document.getElementById("modal-precio").textContent = auto.precio;
 
-document.getElementById("modal-img").src = auto.imagen;
-document.getElementById("modal-marca").textContent = auto.marca;
-document.getElementById("modal-modelo").textContent = auto.modelo;
-document.getElementById("modal-motor").textContent = auto.motor;
-document.getElementById("modal-potencia").textContent = auto.potencia;
-document.getElementById("modal-velocidad").textContent = auto.velocidad;
-document.getElementById("modal-precio").textContent = auto.precio;
-
-modal.style.display = "flex";
+    modal.style.display = "flex";
 }
 
-document.getElementById("cerrar").onclick = ()=>{
-modal.style.display = "none";
+// 1. Cerrar al hacer clic en la 'X'
+document.getElementById("cerrar").onclick = () => {
+    modal.style.display = "none";
 };
 
-window.onclick = (e)=>{
-if(e.target === modal){
-modal.style.display = "none";
-}
+// 2. Cerrar al hacer clic en cualquier parte oscura fuera del cuadro blanco
+window.onclick = (e) => {
+    if (e.target === modal) {
+        modal.style.display = "none";
+    }
 };
